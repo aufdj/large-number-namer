@@ -103,5 +103,5 @@ fn main() {
 
         output = output.replace("illilli", "illi");
         
-    println!("Output: {}", output);   
+    println!("10^{} = {}", &args[1], output);  
 }
