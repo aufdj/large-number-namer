@@ -5,10 +5,8 @@ fn main() {
     let input = (((&args[1].parse::<u128>().unwrap()) - 3) / 3).to_string();
     let mut num: Vec<usize> = vec![];
 
-    // Convert input string to byte array
-    let input = input.into_bytes();
     // Map number ascii codes to numbers i.e. "0" (48) -> 0
-    for i in input.iter() {
+    for i in input.clone().into_bytes().iter() {
         num.push((i - 48) as usize);
     }
 
@@ -61,13 +59,13 @@ fn main() {
     .replace("treviginti", "tresviginti")
     .replace("tretriginta", "trestriginta")
     .replace("trequadraginta", "tresquadraginta")
-    .replace("trequinqaginta", "tresquinquagainta")
+    .replace("trequinquaginta", "tresquinquaginta")
     .replace("treoctaginta", "tresoctaginta")
 
     .replace("seviginti", "sesviginti")
     .replace("setriginta", "sestriginta")
     .replace("sequadraginta", "sesquadraginta")
-    .replace("sequinqaginta", "sesquinquagainta")
+    .replace("sequinquaginta", "sesquinquaginta")
     .replace("seoctaginta", "sesoctaginta")
 
     .replace("septennonaginta", "septenonaginta")
