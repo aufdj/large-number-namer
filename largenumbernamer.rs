@@ -1,8 +1,10 @@
 use std::env;
+use num::bigint::BigInt;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    let input = (((&args[1].parse::<u128>().unwrap()) - 3) / 3).to_string();
+    let input: BigInt = ((&args[1].parse::<BigInt>().unwrap()) - 3) / 3;
+    let input = input.to_string();
     let mut num: Vec<usize> = vec![];
 
     // Map number ascii codes to numbers i.e. "0" (48) -> 0
@@ -33,8 +35,8 @@ fn main() {
         }
     }
     if input.len() % 3 == 2 {
-        output.push_str(units[num[0]]);
-        output.push_str(tens[num[1]]);
+        output.push_str(units[num[1]]);
+        output.push_str(tens[num[0]]);
         output.push_str("lli");
         for i in (2..num.len()).step_by(3) {
             output.push_str(units[num[i+2]]);
@@ -87,6 +89,7 @@ fn main() {
 
     .replace("ellion", "illion")
     .replace("allion", "illion")
+    .replace("alli", "illi")
 
     .replace("no[illi", "nonilli")
 
