@@ -4,6 +4,6 @@ large-number-namer takes an integer n and returns the name for 10<sup>n</sup> us
 To run: largenumbernamer.exe n<br>
 <br>
 Minimum value of n: 6<br>
-Maximum value of n: 340,282,366,920,938,463,463,374,607,431,768,211,455<br>
+Maximum value of n: No limit other than the Windows command line 8192 character limit.<br>
 <br>
 https://en.wikipedia.org/wiki/Names_of_large_numbers
